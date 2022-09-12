@@ -59,8 +59,7 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### FIGURE-03 CIRCUIT DIAGRAM
-
-
+![](https://github.com/Kishore00007/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/blob/main/s%201.png)
 
 ### PROCEDURE:
 1.	Connect the circuit as per the circuit diagram 
@@ -76,14 +75,31 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
+ * roll no : 212221240023
+ * your name : S.kishore kumar
+ * department and year : AI&ML ,2nd year
  
  
+ ```
  
+int sensorvalue=A0;
+int newton;
+void setup()
+{
+ Serial.begin(9600);  
+}
+void loop()
+{
+ sensorvalue=analogRead(A0);
+ newton=map(sensorvalue,0,466,0,10);
+ Serial.print("Raw value: ");
+ Serial.println(sensorvalue);
+ Serial.print("force:");
+ Serial.println(newton);
+ delay(1000);
+}
  
- 
+ ```
  
  
  
@@ -99,6 +115,7 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### TABLE -02 standard deviation table 
+![](https://github.com/Kishore00007/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/blob/main/s2.jpg)
 ### Population Standard Deviation
 The population standard deviation, the standard definition of σ, is used when an entire population can be measured, and is the square root of the variance of a given data set. In cases where every member of a population can be sampled, the following equation can be used to find the standard deviation of the entire population:
 
